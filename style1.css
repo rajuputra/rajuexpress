@@ -1,0 +1,60 @@
+.banner{
+	background: url("bg.jpg") no-repeat center;
+	background-size: cover;
+	padding-top: 20%;
+	padding-bottom: 20%;
+	color: #FFF;
+}
+
+.lingkaran{
+	display: inline-block;
+	border-radius: 50%;
+	width: 150px;
+	margin: auto;
+	height: 150px;
+	color: #fff;
+	background-color: #ffc107;
+	padding-top: 30px;
+}
+.lingkaran i{
+	position: relative;
+}
+.kontak{
+	background: url("kontak.jpg") no-repeat center center;
+	background-size: cover;
+	padding-bottom: 20%;
+	padding-top: 20%;
+	color: #fff;
+}
+.navigasi{
+	display: inline-block;
+	border-radius: 50%;
+	width: 30px;
+	margin: auto;
+	height: 30px;
+	color: #fff;
+	background-color: #ffc107;
+	padding-top: 30px;
+}
+.navigasi i{
+	position: relative;
+}
+.teks a{
+	color: white;
+}
+.teks a:hover{
+	color: black;
+}
+.lingkaranA{
+	display: inline-block;
+	border-radius: 50%;
+	width: 200px;
+	margin: auto;
+	height: 200px;
+	color: #fff;
+	background-color: #ffc107;
+	padding-top: 50px;
+}
+.lingkaranA i{
+	position: relative;
+}
