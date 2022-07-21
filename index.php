@@ -50,7 +50,19 @@ if(isset($_POST["submit"])) {
 	<!-- banner -->
 	<div class="container-fluid banner">
 		<div class="container text-center hh">
-			<h4 class="display-5 text-warning">Selamat Datang di Website Kami</h4>
+			<strong><h4 class="display-5 text-warning" id="tulisan"></h4></strong>
+			<script type="text/javascript">
+	      var i = 0;
+	      var text = "Selamat Datang di Website Kami";
+	      function typing(){
+	        if(i < text.length){
+	          document.getElementById("tulisan").innerHTML += text.charAt(i);
+	          i++;
+	          setTimeout(typing,50);
+	        }
+	      }
+	      typing();
+	    </script>
 			<h3 class="display-6 text-light">Penyedia Layanan Pengiriman</h3>
 			<a href="#layanan">
 				<button type="button" class="btn btn-warning btn-lg">Cek Layanan</button>
