@@ -2,6 +2,8 @@
 require "config.php";
 	$hasil = 0;
 if(isset($_POST["submit"])) {
+	echo "<script>alert('Terimakasih! Inputan anda telah masuk !');
+document.location.href = '#biaya'</script>";
 	$hasil = hitung($_POST["jarak"]);
 	tulis($_POST);
 }
@@ -19,6 +21,7 @@ if(isset($_POST["submit"])) {
   </head>
 
   <body>
+		</script>
   	<!-- navbar -->
   	<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg fixed-top">
 	  <div class="container">
@@ -35,7 +38,7 @@ if(isset($_POST["submit"])) {
 	          <a class="nav-link" href="#layanan">Layanan</a>
 	        </li>
 	        <li class="nav-item">
-	          <a class="nav-link" href="#biaya">Biaya</a>
+	          <a class="nav-link" href="#biaya">Cek Biaya</a>
 	        </li>
 	        <li class="nav-item">
 	          <a class="nav-link" href="#tentang">Tentang</a>
@@ -43,10 +46,16 @@ if(isset($_POST["submit"])) {
 	        <li class="nav-item">
 	          <a class="nav-link" href="#kontak">Kontak Kami</a>
 	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="tampil.php">Cek Inputan</a>
+	        </li>
 	      </ul>
 	    </div>
 	  </div>
 	</nav>
+	<?php
+	echo "<script>notif();</script>";
+	?>
 	<!-- banner -->
 	<div class="container-fluid banner">
 		<div class="container text-center hh">
@@ -110,11 +119,15 @@ if(isset($_POST["submit"])) {
 			<div class="row pt-4 gx-4 gy-4">
 				<div class="col-md-12">
 					<form  method="post">
+						<label class="form-label" for="nama">Nama : </label>
+					  <input type="text" id="nama" name="nama" placeholder="Masukkan nama" class="form-control" value="<?php if(isset($_POST["submit"])) echo $_POST["nama"] ?>" />
+					  <br>
 					  <label class="form-label" for="jarak">Jarak (Dalam KM): </label>
 					  <input type="number" id="jarak" name="jarak" placeholder="Masukkan jarak" class="form-control" value="<?php if(isset($_POST["submit"])) echo $_POST["jarak"] ?>" />
 					  <br>
 					  <button class="btn btn-warning" id="tombol_form" name="submit" value="submit" type="submit">Hitung Biaya</button>
 					</form>
+					
 					<br>
 					<label class="form-label">Biaya Pengiriman : Rp</label><span id="hasil"><?= $hasil ?></span>
 				</div>
@@ -172,9 +185,8 @@ if(isset($_POST["submit"])) {
 			</div>
 		</div>
 	</div>
-	<div class="container text-center pt-3 teks ">
-		<a class="nav-link"href="tampil.php" >tampilan</a>
-		All Rights Reserved &copy; 2022
+	<div class="container text-center pt-4">
+		Created By Raju Putra &copy; 2022
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
