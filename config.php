@@ -5,10 +5,11 @@ function hitung($jarak) {
 }
 
 function tulis($data) {
+	$nama = $data["nama"];
 	$jarak = $data["jarak"];
 	$total = hitung($jarak) . "\n";
 
-	$cetak = $jarak ."|".$total;
+	$cetak = $nama."|".$jarak ."|".$total;
 
 	$pesanan = fopen("inputan.txt","a");
 	fwrite($pesanan, $cetak);
