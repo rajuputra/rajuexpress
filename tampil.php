@@ -33,6 +33,7 @@
 			  <thead>
 			    <tr>
 			      <th scope="col">No</th>
+			      <th scope="col">Nama</th>
 			      <th scope="col">Jarak</th>
 			      <th scope="col">Hasil</th>
 			    </tr>
@@ -46,7 +47,8 @@
 							echo "<tr>";
 							echo "<th scope='row'>$hitung</th>";
 							echo "<td>$pisah[0]</td>";
-							echo "<td>Rp$pisah[1]</td>";
+							echo "<td>$pisah[1]</td>";
+							echo "<td>Rp$pisah[2]</td>";
 							echo "</tr>";
 							$hitung++;
 						}
